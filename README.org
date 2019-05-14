@@ -1,5 +1,7 @@
-a simplified, more detailed version of
+a simplified, more detailed version of parts of
 
 Authenticated Modular Maps in Haskell
 
-https://icfp18.sigplan.org/event/tyde-2018-authenticated-modular-maps-in-haskell
+[[https://icfp18.sigplan.org/event/tyde-2018-authenticated-modular-maps-in-haskell]]
+
+[[https://www.researchgate.net/publication/327738906_Authenticated_modular_maps_in_Haskell]]

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 02b40cde495a69fe0daa21bf74dd7afa2b60fcccc7510519751064d166e23699
+-- hash: 44a16573a86f8932fa6d38cf51dd2126817ba421e7a4f508a85769e07ea2ec38
 
 name:           pluggable-stackable-api-impl-example
 version:        0.1.0.0
@@ -14,7 +14,7 @@ license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
-    README.md
+    README.org
 
 library
   exposed-modules:
@@ -25,32 +25,33 @@ library
       src
   ghc-options: -Wall -fwarn-redundant-constraints
   build-depends:
-      HUnit
-    , base >=4.7 && <5
+      base >=4.7 && <5
     , bloomfilter
     , containers
+    , hspec
+    , hspec-expectations
     , lrucache
     , mtl
     , protolude
-    , test-hunit-util
   default-language: Haskell2010
 
 test-suite t
   type: exitcode-stdio-1.0
-  main-is: Spec.hs
+  main-is: hspec.hs
   other-modules:
+      PSSpec
       Paths_pluggable_stackable_api_impl_example
   hs-source-dirs:
       test
   ghc-options: -Wall -fwarn-redundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      HUnit
-    , base >=4.7 && <5
+      base >=4.7 && <5
     , bloomfilter
     , containers
+    , hspec
+    , hspec-expectations
     , lrucache
     , mtl
     , pluggable-stackable-api-impl-example
     , protolude
-    , test-hunit-util
   default-language: Haskell2010

@@ -5,17 +5,17 @@ author:              "Harold Carr"
 copyright:           "2019 Harold Carr"
 
 extra-source-files:
-- README.md
+- README.org
 
 dependencies:
 - base >= 4.7 && < 5
 - bloomfilter
 - containers
-- HUnit
+- hspec
+- hspec-expectations
 - lrucache
 - mtl
 - protolude
-- test-hunit-util
 
 library:
   source-dirs: src
@@ -27,7 +27,7 @@ ghc-options:
 tests:
   t:
     source-dirs:         test
-    main:                Spec.hs
+    main:                hspec.hs
     ghc-options:
     - -threaded
     - -rtsopts

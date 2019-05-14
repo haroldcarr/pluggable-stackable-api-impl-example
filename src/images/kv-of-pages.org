@@ -1,0 +1,20 @@
+#+begin_src ditaa :file kv-of-pages.png :cmdline -E -s 4.0 :cache yes
+implementation                 network
+                                  |
++-------+                         |
+| k/v   |      +------+           |
+| store | ---> | page |           |
+|       |      +------+           |
+|       |                request  | missing page
+|       |      +------+ --------> | ------------>
+|       | ---> | page |           |
+|       |      +------+ <-------- | <------------
+|       |                         | authenticated
+|       |         .               |       +------+
+|       |         .               |       | page |
+|       |         .               |       +------+
+|       |                         |
+|       |      +------+           |
+|       | ---> | page |           |
++-------+      +------+           |
+#+end_src

@@ -1,0 +1,20 @@
+#+begin_src ditaa :file cache-bloom-kv.png :cmdline -E -s 4.0 :cache yes
+         API                implementation
+
+          |          +------------+
+          |          |   cache    |
+          |          |            |
+          |          |     +------+------+
+          |          |     |    bloom    |
+          |          |     |             |
+          |          |     |      +------+------+
+user ---> | -------> |     |      |  k/v store  |
+          |          |     |      |             |
+          |          |     |      +------+------+
+          |          |     |             |
+          |          |     |             |
+          |          |     +------+------+
+          |          |            |
+          |          |            |
+          |          +------------+
+#+end_src
