@@ -1,0 +1,17 @@
+#resolver: lts-13.21
+resolver: lts-11.5
+packages:
+- .
+- '../test-hunit-util'
+extra-deps:
+- bloomfilter-2.0.1.0@sha256:5b67d765315fb2abc1cde85e3c20ae1badfbe8d1070ed57525b7c428586e2d2f
+# flags: {}
+# extra-package-dbs: []
+# system-ghc: true
+# require-stack-version: -any # Default
+# require-stack-version: ">=1.9"
+# arch: i386
+# arch: x86_64
+# extra-include-dirs: [/path/to/dir]
+# extra-lib-dirs: [/path/to/dir]
+# compiler-check: newer-minor

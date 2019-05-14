@@ -1,0 +1,56 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 02b40cde495a69fe0daa21bf74dd7afa2b60fcccc7510519751064d166e23699
+
+name:           pluggable-stackable-api-impl-example
+version:        0.1.0.0
+author:         Harold Carr
+copyright:      2019 Harold Carr
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Example
+  other-modules:
+      Paths_pluggable_stackable_api_impl_example
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -fwarn-redundant-constraints
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , bloomfilter
+    , containers
+    , lrucache
+    , mtl
+    , protolude
+    , test-hunit-util
+  default-language: Haskell2010
+
+test-suite t
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_pluggable_stackable_api_impl_example
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -fwarn-redundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , bloomfilter
+    , containers
+    , lrucache
+    , mtl
+    , pluggable-stackable-api-impl-example
+    , protolude
+    , test-hunit-util
+  default-language: Haskell2010

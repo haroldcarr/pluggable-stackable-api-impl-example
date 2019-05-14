@@ -1,0 +1,36 @@
+name:                pluggable-stackable-api-impl-example
+version:             0.1.0.0
+license:             BSD3
+author:              "Harold Carr"
+copyright:           "2019 Harold Carr"
+
+extra-source-files:
+- README.md
+
+dependencies:
+- base >= 4.7 && < 5
+- bloomfilter
+- containers
+- HUnit
+- lrucache
+- mtl
+- protolude
+- test-hunit-util
+
+library:
+  source-dirs: src
+
+ghc-options:
+- -Wall
+- -fwarn-redundant-constraints
+
+tests:
+  t:
+    source-dirs:         test
+    main:                Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pluggable-stackable-api-impl-example
